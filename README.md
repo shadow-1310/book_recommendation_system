@@ -8,16 +8,16 @@ This website can predict similar books based on collaborative filtering
 
 ### Homepage
 
-![home](https://github.com/shadow-1310/commodity-price-prediction/blob/main/README_images/home.png)
+![home](https://github.com/shadow-1310/book_recommendation_system/blob/main/README_images/homepage.png)
 
 ### datalist options to select 
 
-![datalist](https://github.com/shadow-1310/commodity-price-prediction/blob/main/README_images/laptop_home.png)
+![datalist](https://github.com/shadow-1310/book_recommendation_system/blob/main/README_images/datalist.png)
 
 
 ### Recommendation
 
-![recommendation](https://github.com/shadow-1310/commodity-price-prediction/blob/main/README_images/laptop_predict.png)
+![recommendation](https://github.com/shadow-1310/book_recommendation_system/blob/main/README_images/recommend.png)
 
 
 ## Directory Structure
