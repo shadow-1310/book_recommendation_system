@@ -12,10 +12,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html',
+                           book_titles = pt.index.unique(),
                            book_name = list(popular_df['Book-Title'].values),
                            author=list(popular_df['Book-Author'].values),
                            image=list(popular_df['Image-URL-M'].values),
-                           votes=list(popular_df['num_ratings'].values),
+                           votes=list(popular_df['num_rating'].values),
                            rating=list(popular_df['avg_rating'].values)
                            )
 
@@ -25,9 +26,10 @@ def recommend_ui():
 
 @app.route('/recommend_books',methods=['post'])
 def recommend():
+    book_titles = pt.index.unique()
     user_input = request.form.get('user_input')
     index = np.where(pt.index == user_input)[0][0]
-    similar_items = sorted(list(enumerate(similarity_scores[index])), key=lambda x: x[1], reverse=True)[1:5]
+    similar_items = sorted(list(enumerate(similarity_scores[index])), key=lambda x: x[1], reverse=True)[1:9]
 
     data = []
     for i in similar_items:
@@ -41,7 +43,7 @@ def recommend():
 
     print(data)
 
-    return render_template('recommend.html',data=data)
+    return render_template('recommend.html',data=data, book_titles=book_titles)
 
 if __name__ == '__main__':
     app.run(debug=True)

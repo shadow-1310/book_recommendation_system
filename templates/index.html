@@ -8,26 +8,35 @@
 </head>
 <style>
     .text-white{
-        color:white
+        color:black
     }
 </style>
-<body style="background-color:black">
+<body style="background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(159,208,158,1) 33%, rgba(126,213,231,1) 100%);">
 
-    <nav class="navbar" style="background-color:#00a65a">
+    <nav class="navbar" style="background: black">
         <a class="navbar-brand">My Book recommender</a>
         <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/recommend">Recommend</a></li>
-            <li><a>Contact</a></li>
+            <li><a>About Me</a></li>
         </ul>
     </nav>
+    
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h1 class="text-white" style="font-size:50px">Recommend Books</h1>
                 <form action="/recommend_books" method="post">
-                    <input name="user_input" type="text" class="form-control"><br>
+                    <!-- <input name="user_input" type="text" class="form-control"><br> -->
+                    <label for="exampleDataList" class="form-label">Enter your book name</label>
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" name="user_input" placeholder="Type to search...">
+                    <datalist id="datalistOptions">
+                        {% for i in book_titles %}
+                    <option value="{{ i }}">
+                        {% endfor %}
+                    </datalist>
                     <input type="submit" class="btn btn-lg btn-warning">
                 </form>
             </div>
