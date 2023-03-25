@@ -24,7 +24,7 @@ This website can predict similar books based on collaborative filtering
 
 ### Raw Data
 
-- [Book details](https://github.com/shadow-1310/commodity-price-prediction/blob/main/car/notebooks/data/CAR%20DETAILS%20FROM%20CAR%20DEKHO.csv) :  book raw data containing the following fields
+- [Book details](https://github.com/shadow-1310/book_recommendation_system/blob/main/notebooks/data/Books.csv) :  book raw data containing the following fields
     - ISBN
     - Book-Title
     - Book-Author
@@ -34,20 +34,20 @@ This website can predict similar books based on collaborative filtering
     - Image-URL-M
     - Image-URL-L
 
-- [User details](https://github.com/shadow-1310/commodity-price-prediction/blob/main/laptop/notebooks/data/laptop_price.txt) :  contains raw data for Laptop Price Prediction app
+- [User details](https://github.com/shadow-1310/book_recommendation_system/blob/main/notebooks/data/Users.csv) :  contains raw data for Laptop Price Prediction app
     - User-ID
     - Location
     - Age
 
-- [Ratings details](https://github.com/shadow-1310/commodity-price-prediction/blob/main/laptop/notebooks/data/laptop_price.txt) :  contains raw data for Laptop Price Prediction app
+- [Ratings details](https://github.com/shadow-1310/book_recommendation_system/blob/main/notebooks/data/Ratings.csv) :  contains raw data for Laptop Price Prediction app
     - User-ID,
     - ISBN,
     - Book-Rating
 ### Notebooks for visualization
 
-- [EDA Notebook](https://github.com/shadow-1310/commodity-price-prediction/blob/main/car/notebooks/CarDekho_predict_2.0.ipynb) :  Jupyter Notebook for Exploratory Data Analysis on the Raw data
+- [EDA Notebook](https://github.com/shadow-1310/book_recommendation_system/blob/main/notebooks/EDA_book_recommender.ipynb) :  Jupyter Notebook for Exploratory Data Analysis on the Raw data
 
-- [Model Notebook](https://github.com/shadow-1310/commodity-price-prediction/blob/main/laptop/notebooks/price_predict_rTree.ipynb) :  Jupyter Notebook for model training and evaluation 
+- [Model Notebook](https://github.com/shadow-1310/book_recommendation_system/blob/main/notebooks/model_training.ipynb) :  Jupyter Notebook for model training and evaluation 
 
 
 ## Run Locally
